@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import RestaurantsIndex from "../views/RestaurantsIndex.vue";
+import RestaurantsNew from "../views/RestaurantsNew.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
     path: "/restaurants",
     name: "restaurants-index",
     component: RestaurantsIndex,
+  },
+  {
+    path: "/restaurants/new",
+    name: "restaurants-new",
+    component: RestaurantsNew,
   },
 
 
