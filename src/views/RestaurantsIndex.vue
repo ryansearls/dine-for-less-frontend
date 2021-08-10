@@ -1,12 +1,13 @@
 <template>
   <div class="restaurants-index">
     <div v-for="restaurant in restaurants" :key="restaurant.id">
-      <router-link v-bind:to="`/restaurants/#{restaurant.id}`">
-        <h2>Name: {{ restaurant.name }}</h2>
+      <router-link v-bind:to="`/restaurants/${restaurant.id}`">
+        <h2>{{ restaurant.name }}</h2>
+        <h3>{{ restaurant.happy_hour }}</h3>
       </router-link>
     </div>
-  </div>      
-</template>      
+  </div>
+</template>
 
 <script>
 import axios from "axios";
@@ -15,7 +16,7 @@ export default {
   data: function () {
     return {
       restaurants: [],
-    }
+    };
   },
 
   created: function () {
@@ -31,5 +32,4 @@ export default {
     },
   },
 };
-
 </script>
