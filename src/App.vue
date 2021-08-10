@@ -8,6 +8,10 @@
       <router-link to="/restaurants">Restaurants</router-link>
       |
       <router-link to="/restaurants/new">New Restaurant</router-link>
+      |
+      <router-link to="/signup">Signup</router-link>
+      |
+      <router-link to="/login">Login</router-link>
     </div>
     <router-view />
   </div>

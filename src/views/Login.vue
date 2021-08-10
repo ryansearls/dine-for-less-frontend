@@ -1,23 +1,22 @@
 <template>
   <div class="login">
     <form v-on:submit.prevent="submit()">
-      <h1>login</h1>
+      <h1>Login</h1>
       <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</l1>
+        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
       <div>
         <label>Email:</label>
-        <input type="email" v-model="newSessionsParams.email" />
+        <input type="email" v-model="newSessionParams.email" />
       </div>
       <div>
         <label>Password:</label>
-        <input type="password" v-model="newSessionsParams.password" />
+        <input type="password" v-model="newSessionParams.password" />
       </div>
       <input type="submit" value="Submit" />
-    <form>
-  </div>      
+    </form>
+  </div>
 </template>
-
 
 <script>
 import axios from "axios";
@@ -36,7 +35,6 @@ export default {
         .then((response) => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          localStorage.setItem("user_id", response.data.user_id);
           this.$router.push("/");
         })
         .catch((error) => {
@@ -49,16 +47,3 @@ export default {
   },
 };
 </script>
-  
-  
-
-
-
-
-
-
-
-}
-
-
-
