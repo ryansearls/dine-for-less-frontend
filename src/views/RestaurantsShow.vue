@@ -4,8 +4,9 @@
     <p>{{ restaurant.neighborhood }}</p>
     <p>{{ restaurant.food_specials }}</p>
     <p>{{ restaurant.happy_hour }}</p>
-    <p>{{ restaurant.image }}</p>
-    <router-link v-bind:to="`/restaurants/${restaurant.id}/edit`">Edit Restaurant</router-link>
+    <img v-bind:src="restaurant.image" />
+
+    <router-link v-bind:to="`/restaurants/${restaurant.id}/edit`"><button>Edit Restaurant</button></router-link>
     |
     <button v-on:click="destroyrestaurant(restaurant)">Delete Restaurant</button>
     |
