@@ -17,7 +17,7 @@
       <input type="text" v-model="newRestaurantParams.image" />
       <input type="submit" value="Create" />
     </form>
-  </div>    
+  </div>
 </template>
 
 <script>
