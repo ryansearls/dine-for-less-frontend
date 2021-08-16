@@ -1,6 +1,6 @@
 <template>
   <div class="restaurants-edit">
-    <form v-on:submit:prevent="updateRestaurant()">
+    <form v-on:submit.prevent="updateRestaurant()">
       <h1>Edit Restaurant</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
