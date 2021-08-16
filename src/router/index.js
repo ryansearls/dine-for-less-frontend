@@ -7,6 +7,7 @@ import Logout from "../views/Logout.vue";
 import RestaurantsIndex from "../views/RestaurantsIndex.vue";
 import RestaurantsNew from "../views/RestaurantsNew.vue";
 import RestaurantsShow from "../views/RestaurantsShow.vue";
+import RestaurantsEdit from "../views/RestaurantsEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -53,6 +54,11 @@ const routes = [
     path: "/restaurants/:id",
     name: "restaurants-show",
     component: RestaurantsShow,
+  },
+  {
+    path: "/restaurants/:id/edit",
+    name: "restaurants-edit",
+    component: RestaurantsEdit,
   },
 
 

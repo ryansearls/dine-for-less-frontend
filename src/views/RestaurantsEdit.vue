@@ -58,7 +58,7 @@ export default {
     destroyRestaurant: function () {
       axios.delete(`/restaurants/${this.$route.params.id}`).then((response) => {
         console.log("Good job!", response.data);
-        this.$router.push("/restaurants);
+        this.$router.push("/restaurants");
       });
     },
   },
