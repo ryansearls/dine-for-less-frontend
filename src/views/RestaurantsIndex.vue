@@ -3,7 +3,7 @@
     <div v-for="restaurant in restaurants" :key="restaurant.id">
       <router-link v-bind:to="`/restaurants/${restaurant.id}`">
         <h1>{{ restaurant.name }}</h1>
-        <img v-bind:src="restaurant.image" contain height="450px" width="600px" />
+        <img v-bind:src="restaurant.image" contain height="400px" width="550px" />
         <h3>{{ restaurant.neighborhood }}</h3>
       </router-link>
     </div>
