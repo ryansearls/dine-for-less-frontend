@@ -5,16 +5,26 @@
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
-      Name:
-      <input type="text" v-model="newRestaurantParams.name" />
-      Neighborhood:
-      <input type="text" v-model="newRestaurantParams.neighborhood" />
-      Food Specials:
-      <input type="text" v-model="newRestaurantParams.food_specials" />
-      Happy Hour:
-      <input type="text" v-model="newRestaurantParams.happy_hour" />
-      Image:
-      <input type="text" v-model="newRestaurantParams.image" />
+      <li>
+        Name:
+        <input type="text" v-model="newRestaurantParams.name" />
+      </li>
+      <li>
+        Neighborhood:
+        <input type="text" v-model="newRestaurantParams.neighborhood" />
+      </li>
+      <li>
+        Food Specials:
+        <input type="text" v-model="newRestaurantParams.food_specials" />
+      </li>
+      <li>
+        Happy Hour:
+        <input type="text" v-model="newRestaurantParams.happy_hour" />
+      </li>
+      <li>
+        Image:
+        <input type="text" v-model="newRestaurantParams.image" />
+      </li>
       <input type="submit" value="Create" />
     </form>
   </div>
