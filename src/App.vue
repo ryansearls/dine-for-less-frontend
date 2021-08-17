@@ -1,19 +1,26 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      |
+      <li>
+        <router-link to="/">Home</router-link>
+      </li>
       <!-- <router-link to="/about">About</router-link>
       | -->
-      <router-link to="/restaurants">Restaurants</router-link>
-      |
-      <router-link to="/restaurants/new">New Restaurant</router-link>
-      |
-      <router-link to="/signup">Signup</router-link>
-      |
-      <router-link to="/login">Login</router-link>
-      |
-      <router-link to="/logout">Logout</router-link>
+      <li>
+        <router-link to="/restaurants">Restaurants</router-link>
+      </li>
+      <li v-if="isLoggedIn()">
+        <router-link to="/restaurants/new">New Restaurant</router-link>
+      </li>
+      <li v-if="!isLoggedIn()">
+        <router-link to="/signup">Signup</router-link>
+      </li>
+      <li v-if="!isLoggedIn()">
+        <router-link to="/login">Login</router-link>
+      </li>
+      <li v-if="isLoggedIn()">
+        <router-link to="/logout">Logout</router-link>
+      </li>
     </div>
     <router-view />
   </div>
@@ -41,3 +48,21 @@
   color: #42b983;
 }
 </style>
+
+<script>
+// import axios from "axios";
+export default {
+  methods: {
+    isLoggedIn: function () {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    getUserId: function () {
+      return localStorage.getItem("user_id");
+    },
+  },
+};
+</script>
