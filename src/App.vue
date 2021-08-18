@@ -1,7 +1,44 @@
 <template>
   <div id="app">
     <div id="nav">
-      <li>
+      <header id="header">
+        <div class="inner">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+          </a>
+
+          <!-- Nav -->
+          <nav>
+            <ul>
+              <li><a href="#menu">Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/restaurants">Restaurants</a></li>
+          <li v-if="isLoggedIn()">
+            <a href="/restaurants/new">New Restaurant</a>
+          </li>
+          <li v-if="!isLoggedIn()">
+            <a href="/signup">Signup</a>
+          </li>
+          <li v-if="!isLoggedIn()">
+            <a href="/login">Login</a>
+          </li>
+          <li v-if="isLoggedIn()">
+            <a href="/logout">Logout</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- <li>
         <router-link to="/">Home</router-link>
       </li>
       <li>
@@ -18,9 +55,39 @@
       </li>
       <li v-if="isLoggedIn()">
         <router-link to="/logout">Logout</router-link>
-      </li>
+      </li> -->
     </div>
     <router-view />
+    <!-- <footer id="footer">
+      <div class="inner">
+        <section>
+          <h2>Get in touch</h2>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="field half">
+                <input type="email" name="email" id="email" placeholder="Email" />
+              </div>
+              <div class="field">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send" class="primary" /></li>
+            </ul>
+          </form>
+        </section>
+        <ul class="copyright">
+          <li>&copy; Untitled. All rights reserved</li>
+          <li>
+            Design:
+            <a href="http://html5up.net">HTML5 UP</a>
+          </li>
+        </ul>
+      </div>
+    </footer> -->
   </div>
 </template>
 
@@ -48,8 +115,12 @@
 </style>
 
 <script>
-// import axios from "axios";
 export default {
+  data: function () {
+    return {
+      user_id: "",
+    };
+  },
   methods: {
     isLoggedIn: function () {
       if (localStorage.getItem("jwt")) {

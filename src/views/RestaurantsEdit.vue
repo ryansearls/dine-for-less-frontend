@@ -52,7 +52,7 @@ export default {
     updateRestaurant: function () {
       axios.patch(`/restaurants/${this.$route.params.id}`, this.currentRestaurantParams).then((response) => {
         console.log(response.data);
-        this.$router.push(`/restaurants/${response.data.id}`);
+        this.$router.push("/restaurants");
       });
     },
     destroyRestaurant: function () {
