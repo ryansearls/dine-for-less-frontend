@@ -4,8 +4,6 @@
       <li>
         <router-link to="/">Home</router-link>
       </li>
-      <!-- <router-link to="/about">About</router-link>
-      | -->
       <li>
         <router-link to="/restaurants">Restaurants</router-link>
       </li>
