@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav"> -->
+    <div class="inner">
       <header id="header">
         <div class="inner">
           <!-- Logo -->
@@ -16,9 +17,11 @@
           </nav>
         </div>
       </header>
+    </div>
 
-      <!-- Menu -->
-      <nav id="menu">
+    <!-- Menu -->
+    <nav id="menu">
+      <div class="inner">
         <h2>Menu</h2>
         <ul>
           <li><a href="/">Home</a></li>
@@ -36,9 +39,10 @@
             <a href="/logout">Logout</a>
           </li>
         </ul>
-      </nav>
+      </div>
+    </nav>
 
-      <!-- <li>
+    <!-- <li>
         <router-link to="/">Home</router-link>
       </li>
       <li>
@@ -56,7 +60,7 @@
       <li v-if="isLoggedIn()">
         <router-link to="/logout">Logout</router-link>
       </li> -->
-    </div>
+    <!-- </div> -->
     <router-view />
     <!-- <footer id="footer">
       <div class="inner">

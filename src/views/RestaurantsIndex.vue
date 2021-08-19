@@ -1,5 +1,22 @@
 <template>
   <div class="restaurants-index">
+    <div class="inner">
+      <section class="tiles">
+        <!-- <div v-for="restaurant in restaurants" :key="restaurant.id"> -->
+        <article class="style6" v-for="restaurant in restaurants" :key="restaurant.id">
+          <span class="image">
+            <img :src="restaurant.image" alt="" />
+          </span>
+          <a :href="`/restaurants/${restaurant.id}`">
+            <h2>{{ restaurant.name }}</h2>
+            <div class="content">
+              <p>{{ restaurant.happy_hour }}</p>
+            </div>
+          </a>
+        </article>
+        <!-- </div> -->
+      </section>
+    </div>
     <div v-for="restaurant in restaurants" :key="restaurant.id">
       <router-link v-bind:to="`/restaurants/${restaurant.id}`">
         <h1>{{ restaurant.name }}</h1>
@@ -34,3 +51,9 @@ export default {
   },
 };
 </script>
+
+<style>
+article {
+  height: 200px;
+}
+</style>
