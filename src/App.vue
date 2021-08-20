@@ -120,11 +120,11 @@
 
 <script>
 export default {
-  data: function () {
-    return {
-      user_id: "",
-    };
-  },
+  // data: function () {
+  //   return {
+  //     user_id: "",
+  //   };
+  // },
   methods: {
     isLoggedIn: function () {
       if (localStorage.getItem("jwt")) {

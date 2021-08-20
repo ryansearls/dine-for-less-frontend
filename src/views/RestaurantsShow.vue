@@ -1,5 +1,20 @@
 <template>
   <div class="restaurants-show">
+    <!-- <div id="main">
+      <div class="inner">
+        <h1>{{ restaurant.name }}</h1>
+        <span class="image main"><img :src="restaurant.image" alt="" /></span>
+        <p>
+          {{ restaurant.neighborhood }}
+        </p>
+        <p>
+          {{ restaurant.food_specials }}
+        </p>
+        <p>
+          {{ restaurant.happy_hour }}
+        </p>
+      </div>
+    </div> -->
     <h2>{{ restaurant.name }}</h2>
     <p>{{ restaurant.neighborhood }}</p>
     <p>{{ restaurant.food_specials }}</p>
