@@ -29,8 +29,8 @@ export default {
   methods: {
     setUpMap: function () {
       // var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoicnNlYXJscyIsImEiOiJja3JwOXdybmYyNjJiMnpxcmg4bWFhNGYzIn0.HTFQvxEQZzDP5lngLTB6gQ";
+      mapboxgl.accessToken = process.env.VUE_APP_KEY;
+      // "pk.eyJ1IjoicnNlYXJscyIsImEiOiJja3JwOXdybmYyNjJiMnpxcmg4bWFhNGYzIn0.HTFQvxEQZzDP5lngLTB6gQ";
 
       var map = new mapboxgl.Map({
         container: "map", // container id
