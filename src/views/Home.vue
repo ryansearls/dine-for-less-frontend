@@ -28,8 +28,10 @@ export default {
   created: function () {},
   methods: {
     setUpMap: function () {
+      // var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
       mapboxgl.accessToken =
         "pk.eyJ1IjoicnNlYXJscyIsImEiOiJja3JwOXdybmYyNjJiMnpxcmg4bWFhNGYzIn0.HTFQvxEQZzDP5lngLTB6gQ";
+
       var map = new mapboxgl.Map({
         container: "map", // container id
         style: "mapbox://styles/rsearls/cksozuxqa0u9d17o38dyx0o8a", // style URL
@@ -50,8 +52,8 @@ export default {
           .setLngLat(feature.geometry.coordinates)
           .setHTML("<h3>" + feature.properties.title + "</h3>" + "<p>" + feature.properties.description + "</p>")
           .addTo(map);
+        popup.addTo(map);
       });
-
       console.log(map);
     },
   },
