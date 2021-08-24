@@ -46,10 +46,10 @@ export default {
 </script>
 
 <style>
-article {
+/* article {
   height: 200px;
 }
 .image {
   height: 200px;
-}
+} */
 </style>

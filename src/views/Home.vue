@@ -3,13 +3,38 @@
     <h1>{{ message }}</h1>
     <h2>{{ message2 }}</h2>
     <div id="map"></div>
+    <footer id="footer">
+      <div class="inner">
+        <section>
+          <h2>Get in touch</h2>
+          <form method="post" action="#">
+            <div class="fields">
+              <div class="field half">
+                <input type="text" name="name" id="name" placeholder="Name" />
+              </div>
+              <div class="field half">
+                <input type="email" name="email" id="email" placeholder="Email" />
+              </div>
+              <div class="field">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li><input type="submit" value="Send" class="primary" /></li>
+            </ul>
+          </form>
+        </section>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style>
 #map {
-  height: 350px;
-  width: auto;
+  width: 75%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
@@ -28,15 +53,13 @@ export default {
   created: function () {},
   methods: {
     setUpMap: function () {
-      // var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
       mapboxgl.accessToken = process.env.VUE_APP_KEY;
-      // "pk.eyJ1IjoicnNlYXJscyIsImEiOiJja3JwOXdybmYyNjJiMnpxcmg4bWFhNGYzIn0.HTFQvxEQZzDP5lngLTB6gQ";
 
       var map = new mapboxgl.Map({
         container: "map", // container id
         style: "mapbox://styles/rsearls/cksozuxqa0u9d17o38dyx0o8a", // style URL
         center: [-104.9903, 39.7392], // starting position [lng, lat]
-        zoom: 11, // starting zoom
+        zoom: 11.5, // starting zoom
       });
 
       map.on("click", function (e) {
