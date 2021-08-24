@@ -1,24 +1,6 @@
 <template>
   <div class="restaurants-show">
     <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <div class="inner">
-          <!-- Logo -->
-          <a href="index.html" class="logo">
-            <span class="symbol"><img src="/images/logo.svg" alt="" /></span>
-            <span class="title">Phantom</span>
-          </a>
-
-          <!-- Nav -->
-          <nav>
-            <ul>
-              <li><a href="#menu">Menu</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       <!-- Menu -->
       <nav id="menu">
         <h2>Menu</h2>
@@ -45,6 +27,14 @@
           <p>
             {{ restaurant.neighborhood }}
           </p>
+          <li>
+            <router-link v-bind:to="`/restaurants/${restaurant.id}/edit`"><button>Edit Restaurant</button></router-link>
+          </li>
+          <li>
+            <button v-on:click="destroyrestaurant(restaurant)">Delete Restaurant</button>
+          </li>
+          <router-link to="/restaurants">Back to restaurants</router-link>
+          -->
         </div>
       </div>
 

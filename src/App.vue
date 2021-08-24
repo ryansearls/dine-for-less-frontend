@@ -6,7 +6,7 @@
         <div class="inner">
           <!-- Logo -->
           <a href="index.html" class="logo">
-            <span class="symbol"><img src="images/logo.svg" alt="" /></span>
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span>
           </a>
 
           <!-- Nav -->
