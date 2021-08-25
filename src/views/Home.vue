@@ -3,8 +3,9 @@
     <h1>{{ message }}</h1>
     <h2>{{ message2 }}</h2>
     <div id="map"></div>
+    <p></p>
     <footer id="footer">
-      <div class="inner">
+      <div>
         <section>
           <h2>Get in touch</h2>
           <form method="post" action="#">
@@ -35,6 +36,10 @@
   height: 500px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.inner {
+  text-align: center;
 }
 </style>
 
