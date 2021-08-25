@@ -3,7 +3,7 @@
     <div class="inner">
       <section class="tiles">
         <!-- <div v-for="restaurant in restaurants" :key="restaurant.id"> -->
-        <article class="style6" v-for="restaurant in restaurants" :key="restaurant.id">
+        <article class="style6 random" v-for="restaurant in restaurants" :key="restaurant.id">
           <span class="image">
             <img :src="restaurant.image" alt="" />
           </span>
@@ -46,10 +46,10 @@ export default {
 </script>
 
 <style>
-/* article {
-  height: 200px;
-}
-.image {
+/* .random {
   height: 200px;
 } */
+.random .image {
+  height: 200px;
+}
 </style>
