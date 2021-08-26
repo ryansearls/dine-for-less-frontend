@@ -1,7 +1,7 @@
 <template>
   <div class="restaurants-new">
     <h1>New Restaurant</h1>
-    <form v-on:submit.prevent="createRestaurant()">
+    <form class="flex-down" v-on:submit.prevent="createRestaurant()">
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
@@ -29,6 +29,33 @@
     </form>
   </div>
 </template>
+
+<style>
+.post-image-body {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.post-image-body * {
+  flex: 1 1 auto;
+  text-align: center;
+
+  margin: 5px;
+}
+.flex-down {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-between;
+  /* width: 50%; */
+}
+.flex-down * {
+  margin: 10px;
+  max-width: 540px;
+}
+</style>
 
 <script>
 import axios from "axios";
