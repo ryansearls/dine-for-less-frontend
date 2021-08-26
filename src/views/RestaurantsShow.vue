@@ -19,13 +19,13 @@
           <h1>{{ restaurant.name }}</h1>
           <span class="image main"><img :src="restaurant.image" alt="" /></span>
           <p>
-            {{ restaurant.happy_hour }}
+            {{ restaurant.neighborhood }}
           </p>
           <p>
             {{ restaurant.food_specials }}
           </p>
           <p>
-            {{ restaurant.neighborhood }}
+            {{ restaurant.happy_hour }}
           </p>
           <li>
             <router-link v-bind:to="`/restaurants/${restaurant.id}/edit`"><button>Edit Restaurant</button></router-link>
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <!-- Footer -->
+      <!-- Footer
       <footer id="footer">
         <div class="inner">
           <section>
@@ -68,7 +68,7 @@
             </li>
           </ul>
         </div>
-      </footer>
+      </footer> -->
     </div>
     <!-- <body class="is-preload"> -->
     <!-- Wrapper -->

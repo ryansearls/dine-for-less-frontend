@@ -1,6 +1,6 @@
 <template>
   <div class="signup">
-    <form v-on:submit.prevent="submit()">
+    <form class="flex-down" v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -35,6 +35,33 @@
     </form>
   </div>
 </template>
+
+<style>
+.post-image-body {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.post-image-body * {
+  flex: 1 1 auto;
+  text-align: center;
+
+  margin: 5px;
+}
+.flex-down {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: space-between;
+  /* width: 50%; */
+}
+.flex-down * {
+  margin: 10px;
+  max-width: 540px;
+}
+</style>
 
 <script>
 import axios from "axios";

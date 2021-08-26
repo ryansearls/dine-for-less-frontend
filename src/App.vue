@@ -41,26 +41,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/restaurants">Restaurants</router-link>
-      </li>
-      <li v-if="isLoggedIn()">
-        <router-link to="/restaurants/new">New Restaurant</router-link>
-      </li>
-      <li v-if="!isLoggedIn()">
-        <router-link to="/signup">Signup</router-link>
-      </li>
-      <li v-if="!isLoggedIn()">
-        <router-link to="/login">Login</router-link>
-      </li>
-      <li v-if="isLoggedIn()">
-        <router-link to="/logout">Logout</router-link>
-      </li> -->
-    <!-- </div> -->
     <router-view />
   </div>
 </template>
