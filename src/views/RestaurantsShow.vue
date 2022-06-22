@@ -34,41 +34,9 @@
             <button v-on:click="destroyrestaurant(restaurant)">Delete Restaurant</button>
           </li>
           <router-link to="/restaurants">Back to restaurants</router-link>
-          -->
         </div>
       </div>
     </div>
-    <!-- <body class="is-preload"> -->
-    <!-- Wrapper -->
-    <!-- <div id="wrapper"> -->
-    <!-- <div id="main">
-      <div class="inner">
-        <h1>{{ restaurant.name }}</h1>
-        <span class="image main"><img :src="restaurant.image" alt="" /></span>
-        <p>
-          {{ restaurant.neighborhood }}
-        </p>
-        <p>
-          {{ restaurant.food_specials }}
-        </p>
-        <p>
-          {{ restaurant.happy_hour }}
-        </p>
-      </div>
-    </div> -->
-    <!-- <h2>{{ restaurant.name }}</h2>
-    <p>{{ restaurant.neighborhood }}</p>
-    <p>{{ restaurant.food_specials }}</p>
-    <p>{{ restaurant.happy_hour }}</p>
-    <img v-bind:src="restaurant.image" contain height="450px" width="700px" />
-    <div>
-      <li>
-        <router-link v-bind:to="`/restaurants/${restaurant.id}/edit`"><button>Edit Restaurant</button></router-link>
-      </li>
-      <li>
-        <button v-on:click="destroyrestaurant(restaurant)">Delete Restaurant</button>
-      </li>
-      <router-link to="/restaurants">Back to restaurants</router-link> -->
   </div>
 </template>
 
